@@ -24,6 +24,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 -- Color Schemes
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'haishanh/night-owl.vim'
 
 -- Git Integration
 Plug 'airblade/vim-gitgutter'
@@ -71,6 +72,7 @@ Plug 'rust-lang/rust.vim'
 
 -- Prisma - file detection and syntax highlighting
 Plug 'pantharshit00/vim-prisma'
+Plug 'pantharshit00/coc-prisma'
 
 -- Plug 'Olical/conjure', {'tag': 'v4.23.0'}
 -- Plug 'tpope/vim-dispatch'
@@ -113,10 +115,22 @@ Plug 'github/copilot.vim'
 
 Plug('joshdick/onedark.vim', { branch = 'main' })
 Plug('sainnhe/sonokai', { branch = 'master' })
+Plug('folke/tokyonight.nvim')
 
 Plug('kevinhwang91/nvim-bqf')
 
 Plug('vim-test/vim-test')
+
+-- Prettier
+Plug 'nvim-lua/plenary.nvim'
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'MunifTanjim/prettier.nvim'
+Plug 'MunifTanjim/eslint.nvim'
+
+-- Display issues 
+Plug 'folke/trouble.nvim'
+
+Plug 'ThePrimeagen/vim-be-good'
 
 -- Initialize plugin system
 vim.call('plug#end')

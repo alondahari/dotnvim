@@ -13,7 +13,7 @@ opt.termguicolors = true
 opt.background = 'dark'
 g.sonokai_style = 'andromeda'
 g.airline_theme = 'sonokai'
-cmd('colorscheme sonokai')
+cmd('colorscheme tokyonight-moon')
 
 -- ----------------------------------------------
 -- Line Numbering
@@ -61,13 +61,15 @@ opt.hlsearch = true
 opt.incsearch = true
 opt.ignorecase = true
 
+opt.colorcolumn = "80"
+
 -- make it so when the cursor is within 8 lines of the edge of the screen it
 -- causes the scroll
 opt.scrolloff = 8
 
 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 -- delays and poor user experience.
--- vim.opt.updatetime = 300
+vim.opt.updatetime = 50
 
 -- Always show the signcolumn, otherwise it would shift the text each time
 -- diagnostics appear/become resolved.
