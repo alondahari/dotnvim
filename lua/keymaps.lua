@@ -50,7 +50,7 @@ vim.keymap.set("n", "<leader>iq", "<cmd>TroubleToggle quickfix<cr>",
 vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
   {silent = true, noremap = true}
 )
-vim.keymap.set("n", "<leader>tn", function()
+vim.keymap.set("n", "<leader>in", function()
   require("trouble").next({skip_groups = true, jump = true})
 end)
 
@@ -99,4 +99,8 @@ vim.keymap.set("n", "<leader>ra", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left>
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
+end)
+
+vim.keymap.set("n", "<Space>w", function()
+    vim.cmd("w")
 end)
