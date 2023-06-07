@@ -25,6 +25,9 @@ local types = require("luasnip.util.types")
 local parse = require("luasnip.util.parser").parse_snippet
 local ms = ls.multi_snippet
 
+-- load snippets from path/of/your/nvim/config/my-cool-snippets
+require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/snippets/" })
+
 ls.config.set_config {
   -- This tells LuaSnip to remember to keep around the last snippet.
   -- You can jump back into it even if you move outside of the selection

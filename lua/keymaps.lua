@@ -104,3 +104,8 @@ end)
 vim.keymap.set("n", "<Space>w", function()
     vim.cmd("w")
 end)
+
+-- format json
+vim.keymap.set("n", "<Space>j", function()
+    vim.cmd("%!jq .")
+end)
