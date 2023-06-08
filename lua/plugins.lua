@@ -121,12 +121,6 @@ Plug('kevinhwang91/nvim-bqf')
 
 Plug('vim-test/vim-test')
 
--- Prettier
-Plug 'nvim-lua/plenary.nvim'
-Plug 'jose-elias-alvarez/null-ls.nvim'
-Plug 'MunifTanjim/prettier.nvim'
-Plug 'MunifTanjim/eslint.nvim'
-
 -- Display issues 
 Plug 'folke/trouble.nvim'
 

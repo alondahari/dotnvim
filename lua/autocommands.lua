@@ -19,5 +19,5 @@ vim.api.nvim_create_autocmd('FileType', {
 })
 vim.api.nvim_create_autocmd('BufWritePre', {
   pattern = '*',
-  command = 'lua vim.lsp.buf.format()'
+  command = 'Neoformat'
 })
