@@ -117,6 +117,9 @@ Plug('joshdick/onedark.vim', { branch = 'main' })
 Plug('sainnhe/sonokai', { branch = 'master' })
 Plug('folke/tokyonight.nvim')
 
+-- switch between vim and tmux
+Plug 'christoomey/vim-tmux-navigator'
+
 Plug('kevinhwang91/nvim-bqf')
 
 Plug('vim-test/vim-test')
