@@ -10,3 +10,6 @@ group = fugitiveGroup,
 vim.keymap.set('n', '<leader>tc', function()
   vim.cmd("tabc")
 end)
+
+vim.keymap.set('n', '<leader>gs', ':vert top Git|vert res 80<cr>')
+vim.keymap.set('n', '<leader>grc', ':Git rebase --continue')
