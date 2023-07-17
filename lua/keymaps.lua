@@ -7,8 +7,9 @@ vim.keymap.set('i', '<c-c>', '<esc>')
 vim.keymap.set('n', '<leader>f', '<cmd>lua require(\'telescope.builtin\').find_files()<cr>')
 vim.keymap.set('n', '<leader>w', '<cmd>lua require(\'telescope.builtin\').find_files{hidden=true, no_ignore=true}<cr>')
 vim.keymap.set('n', '<leader>b', '<cmd>lua require(\'telescope.builtin\').buffers()<cr>')
-vim.keymap.set('n', '<leader>g', '<cmd>lua require(\'telescope.builtin\').live_grep()<cr>')
+vim.keymap.set('n', '<leader>s', '<cmd>lua require(\'telescope.builtin\').live_grep()<cr>')
 vim.keymap.set('n', '<leader>h', '<cmd>lua require(\'telescope.builtin\').help_tags()<cr>')
+vim.keymap.set('n', 'gr', '<cmd>lua require(\'telescope.builtin\').lsp_references()<cr>')
 
 -- ----------------------------------------------
 -- Alt
@@ -30,6 +31,7 @@ vim.keymap.set('n', '<leader>mp', '<cmd>!open -a \'Marked\' "%"<CR>')
 vim.keymap.set('n', '<leader>xx', '<cmd>%bd|e#|bd#<cr>') -- close all other buffers
 vim.keymap.set('n', '<leader>xt', '<cmd>bd<cr>') -- close this buffer
 vim.keymap.set('n', '<leader>xa', '<cmd>%bd<cr>') -- close all buffers
+vim.keymap.set('n', '<leader>xb', '<cmd>bp|bd#<cr>') -- close buffer but not split
 
 -- Trouble
 vim.keymap.set("n", "<leader>it", "<cmd>TroubleToggle<cr>",
@@ -97,15 +99,10 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 -- replace all occurences of current word in file
 vim.keymap.set("n", "<leader>ra", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end)
+vim.keymap.set("n", "<leader><leader>", "<cmd>so<CR>")
 
-vim.keymap.set("n", "<Space>w", function()
-    vim.cmd("w")
-end)
+-- postgres
+vim.keymap.set("n", "<leader>qi", ":PGConnectBuffer<CR>")
+vim.keymap.set({"n", "v"}, "<leader>qq", ":<c-u>exec \"PGRunQuery\"<CR>")
 
--- format json
-vim.keymap.set("n", "<Space>j", function()
-    vim.cmd("%!jq .")
-end)
+vim.keymap.set("n", "<leader>e", "<cmd>Ex<CR>")
