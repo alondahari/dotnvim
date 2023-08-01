@@ -127,7 +127,8 @@ Plug('vim-test/vim-test')
 -- Display issues 
 Plug 'folke/trouble.nvim'
 
-Plug 'ThePrimeagen/vim-be-good'
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
 
 -- Initialize plugin system
 vim.call('plug#end')
