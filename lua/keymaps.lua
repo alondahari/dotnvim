@@ -68,8 +68,8 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "J", "mzJ`z")
 
 -- move half page down without moving cursor
-vim.keymap.set("n", "<C-h>", "<C-d>zz")
-vim.keymap.set("n", "<C-j>", "<C-u>zz")
+vim.keymap.set({"n", "v"}, "<C-h>", "<C-d>zz")
+vim.keymap.set({"n", "v"}, "<C-j>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
