@@ -87,10 +87,6 @@ vim.keymap.set("n", "<leader>ra", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left>
 
 vim.keymap.set("n", "<leader><leader>", "<cmd>so<CR>")
 
--- postgres
-vim.keymap.set("n", "<leader>qi", ":PGConnectBuffer<CR>")
-vim.keymap.set({"n", "v"}, "<leader>qq", ":<c-u>exec \"PGRunQuery\"<CR>")
-
 -- tree view
 vim.keymap.set("n", "<leader>e", "<cmd>Ex<CR>")
 
