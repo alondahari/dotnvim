@@ -33,6 +33,7 @@ Plug 'tpope/vim-fugitive'
 -- Utilities
 Plug 'tpope/vim-commentary' -- make commenting code easier
 Plug 'tpope/vim-surround' -- make dealing with surroundings easier
+Plug 'tpope/vim-abolish' -- replace word variants
 
 -- Global Search
 Plug 'jremmen/vim-ripgrep'
