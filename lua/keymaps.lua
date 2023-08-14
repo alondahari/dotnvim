@@ -37,6 +37,7 @@ vim.keymap.set('n', '<leader>xb', '<cmd>bp|bd#<cr>') -- close buffer but not spl
 vim.keymap.set("n", "<leader>it", "<cmd>TroubleToggle<cr>",
   {silent = true, noremap = true}
 )
+
 vim.keymap.set("n", "<leader>iw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
   {silent = true, noremap = true}
 )
@@ -92,3 +93,11 @@ vim.keymap.set("n", "<leader>e", "<cmd>Ex<CR>")
 
 -- last buffer
 vim.keymap.set("n", "<c-l>", "<c-^>")
+
+-- make current file executable
+vim.keymap.set("n", "<space>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+-- save and quit
+vim.keymap.set("n", "<space>s", "<cmd>wq<CR>")
+vim.keymap.set("n", "<space>w", "<cmd>w<CR>")
+vim.keymap.set("n", "<space>q", "<cmd>q<CR>")
