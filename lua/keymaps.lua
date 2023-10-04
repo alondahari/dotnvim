@@ -9,7 +9,7 @@ vim.keymap.set('n', '<leader>w', '<cmd>lua require(\'telescope.builtin\').find_f
 vim.keymap.set('n', '<leader>b', '<cmd>lua require(\'telescope.builtin\').buffers()<cr>')
 vim.keymap.set('n', '<leader>s', '<cmd>lua require(\'telescope.builtin\').live_grep()<cr>')
 vim.keymap.set('n', '<leader>h', '<cmd>lua require(\'telescope.builtin\').help_tags()<cr>')
-vim.keymap.set('n', 'gr', '<cmd>lua require(\'telescope.builtin\').lsp_references()<cr>')
+vim.keymap.set('n', 'gr', '<cmd>lua require(\'telescope.builtin\').lsp_references({ fname_width = 100, jump_type = "tab" })<cr>')
 
 -- ----------------------------------------------
 -- Alt
@@ -85,6 +85,9 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 -- replace all occurences of current word in file
 vim.keymap.set("n", "<leader>ra", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("v", "<leader>ra", function ()
+  vim.fn.expand('c')
+end)
 
 vim.keymap.set("n", "<leader><leader>", "<cmd>so<CR>")
 
@@ -93,6 +96,7 @@ vim.keymap.set("n", "<leader>e", "<cmd>Ex<CR>")
 
 -- last buffer
 vim.keymap.set("n", "<c-l>", "<c-^>")
+vim.keymap.set("n", "l", "<cmd>vs #<CR>")
 
 -- make current file executable
 vim.keymap.set("n", "<space>x", "<cmd>!chmod +x %<CR>", { silent = true })

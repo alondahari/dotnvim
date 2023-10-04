@@ -131,6 +131,8 @@ Plug 'folke/trouble.nvim'
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 
+Plug('mrjones2014/op.nvim', { ['do'] = 'make install' })
+
 -- Initialize plugin system
 vim.call('plug#end')
 
