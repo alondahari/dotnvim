@@ -106,3 +106,6 @@ vim.keymap.set("n", "<space>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("n", "<space>s", "<cmd>wq<CR>")
 vim.keymap.set("n", "<space>w", "<cmd>w<CR>")
 vim.keymap.set("n", "<space>q", "<cmd>q<CR>")
+
+-- close tab
+vim.keymap.set('n', '<leader>tc', ':tabc<cr>')

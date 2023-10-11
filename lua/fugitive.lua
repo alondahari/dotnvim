@@ -7,10 +7,10 @@ api.nvim_create_autocmd("User", {
   group = fugitiveGroup,
 })
 
-vim.keymap.set('n', '<leader>tc', ':tabc<cr>')
-
 vim.keymap.set('n', '<leader>gs', ':vert top Git|vert res 80<cr>')
-vim.keymap.set('n', '<leader>grc', ':Git rebase --continue<cr>')
+vim.keymap.set('n', '<leader>gc', ':Git rebase --continue<cr>')
+vim.keymap.set('n', '<leader>ga', ':Git rebase --abort<cr>')
+vim.keymap.set('n', '<leader>gb', ':Git blame<cr>')
 
 -- Gitsigns
 require('gitsigns').setup {
@@ -84,10 +84,10 @@ require('gitsigns').setup {
     -- map('n', '<leader>hu', gs.undo_stage_hunk)
     -- map('n', '<leader>hR', gs.reset_buffer)
     -- map('n', '<leader>hp', gs.preview_hunk)
-    map('n', '<leader>gbf', function() gs.blame_line{full=true} end)
-    map('n', '<leader>gbi', gs.toggle_current_line_blame)
-    map('n', '<leader>gdt', gs.diffthis)
-    map('n', '<leader>gdd', function() gs.diffthis('~') end)
+    map('n', '<leader>gf', function() gs.blame_line{full=true} end)
+    map('n', '<leader>gi', gs.toggle_current_line_blame)
+    map('n', '<leader>gd', gs.diffthis)
+    -- map('n', '<leader>gdd', function() gs.diffthis('~') end)
     -- map('n', '<leader>td', gs.toggle_deleted)
 
     -- Text object
