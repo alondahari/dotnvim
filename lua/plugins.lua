@@ -27,7 +27,7 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'haishanh/night-owl.vim'
 
 -- Git Integration
-Plug 'airblade/vim-gitgutter'
+Plug 'lewis6991/gitsigns.nvim'
 Plug 'tpope/vim-fugitive'
 
 -- Utilities
