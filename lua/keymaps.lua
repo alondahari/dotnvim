@@ -9,6 +9,7 @@ vim.keymap.set('n', '<leader>w', '<cmd>lua require(\'telescope.builtin\').find_f
 vim.keymap.set('n', '<leader>b', '<cmd>lua require(\'telescope.builtin\').buffers()<cr>')
 vim.keymap.set('n', '<leader>s', '<cmd>lua require(\'telescope.builtin\').live_grep()<cr>')
 vim.keymap.set('n', '<leader>h', '<cmd>lua require(\'telescope.builtin\').help_tags()<cr>')
+vim.keymap.set('n', '<leader>c', '<cmd>lua require(\'telescope.builtin\').git_commits()<cr>')
 vim.keymap.set('n', 'gr', '<cmd>lua require(\'telescope.builtin\').lsp_references({ fname_width = 100, jump_type = "tab" })<cr>')
 
 -- ----------------------------------------------
