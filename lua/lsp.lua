@@ -47,7 +47,7 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'tsserver', 'clojure_lsp', 'sourcekit', 'pyright', 'vimls', 'dockerls', 'terraformls', 'graphql', 'typescript',
+local servers = { 'tsserver', 'clojure_lsp', 'sourcekit', 'pyright', 'vimls', 'dockerls', 'terraformls', 'graphql',
   'dartls', 'lua_ls', 'prismals', 'ltex' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
