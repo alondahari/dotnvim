@@ -9,7 +9,7 @@ vim.keymap.set('n', 'tw', '<cmd>lua require(\'telescope.builtin\').find_files{hi
 vim.keymap.set('n', 'tb', '<cmd>lua require(\'telescope.builtin\').buffers()<cr>')
 vim.keymap.set('n', 'ts', '<cmd>lua require(\'telescope.builtin\').live_grep()<cr>')
 vim.keymap.set('n', 'th', '<cmd>lua require(\'telescope.builtin\').help_tags()<cr>')
-vim.keymap.set('n', 'tc', '<cmd>lua require(\'telescope.builtin\').git_commits()<cr>')
+vim.keymap.set('n', 'tl', '<cmd>lua require(\'telescope.builtin\').git_commits()<cr>')
 vim.keymap.set('n', 'tr', '<cmd>lua require(\'telescope.builtin\').lsp_references({ fname_width = 100, jump_type = "tab" })<cr>')
 
 -- ----------------------------------------------
@@ -59,10 +59,8 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 -- replace all occurences of current word in file
 vim.keymap.set("n", "<leader>ra", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-vim.keymap.set("v", "<leader>ra", function ()
-  vim.fn.expand('c')
-end)
 
+-- source current file
 vim.keymap.set("n", "<leader><leader>", "<cmd>so<CR>")
 
 -- tree view
@@ -76,9 +74,9 @@ vim.keymap.set("n", "l", "<cmd>vs #<CR>")
 vim.keymap.set("n", "<space>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- save and quit
-vim.keymap.set("n", "<space>s", "<cmd>wq<CR>")
-vim.keymap.set("n", "<space>w", "<cmd>w<CR>")
-vim.keymap.set("n", "<space>q", "<cmd>q<CR>")
+vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
+vim.keymap.set("n", "<leader>q", "<cmd>q<CR>")
 
 -- close tab
-vim.keymap.set('n', '<leader>tc', ':tabc<cr>')
+vim.keymap.set('n', 'tc', ':tabc<cr>')
+vim.keymap.set('n', 'tn', ':tabn<cr>')
