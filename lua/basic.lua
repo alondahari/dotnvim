@@ -69,7 +69,7 @@ opt.colorcolumn = "80"
 
 -- make it so when the cursor is within 8 lines of the edge of the screen it
 -- causes the scroll
-opt.scrolloff = 8
+opt.scrolloff = 9999
 
 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 -- delays and poor user experience.
