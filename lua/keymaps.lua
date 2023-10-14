@@ -4,13 +4,13 @@ vim.keymap.set('i', '<c-c>', '<esc>')
 -- ----------------------------------------------
 -- Fuzzy Finder Configuration
 -- ----------------------------------------------
-vim.keymap.set('n', '<leader>f', '<cmd>lua require(\'telescope.builtin\').find_files()<cr>')
-vim.keymap.set('n', '<leader>w', '<cmd>lua require(\'telescope.builtin\').find_files{hidden=true, no_ignore=true}<cr>')
-vim.keymap.set('n', '<leader>b', '<cmd>lua require(\'telescope.builtin\').buffers()<cr>')
-vim.keymap.set('n', '<leader>s', '<cmd>lua require(\'telescope.builtin\').live_grep()<cr>')
-vim.keymap.set('n', '<leader>h', '<cmd>lua require(\'telescope.builtin\').help_tags()<cr>')
-vim.keymap.set('n', '<leader>c', '<cmd>lua require(\'telescope.builtin\').git_commits()<cr>')
-vim.keymap.set('n', 'gr', '<cmd>lua require(\'telescope.builtin\').lsp_references({ fname_width = 100, jump_type = "tab" })<cr>')
+vim.keymap.set('n', 'tf', '<cmd>lua require(\'telescope.builtin\').find_files()<cr>')
+vim.keymap.set('n', 'tw', '<cmd>lua require(\'telescope.builtin\').find_files{hidden=true, no_ignore=true}<cr>')
+vim.keymap.set('n', 'tb', '<cmd>lua require(\'telescope.builtin\').buffers()<cr>')
+vim.keymap.set('n', 'ts', '<cmd>lua require(\'telescope.builtin\').live_grep()<cr>')
+vim.keymap.set('n', 'th', '<cmd>lua require(\'telescope.builtin\').help_tags()<cr>')
+vim.keymap.set('n', 'tc', '<cmd>lua require(\'telescope.builtin\').git_commits()<cr>')
+vim.keymap.set('n', 'tr', '<cmd>lua require(\'telescope.builtin\').lsp_references({ fname_width = 100, jump_type = "tab" })<cr>')
 
 -- ----------------------------------------------
 -- Alt
@@ -24,9 +24,6 @@ vim.keymap.set('n', '<leader>n', function()
   local new_name = vim.fn.input('New file name: ', vim.fn.expand('%'), 'file')
   rename(old_name, new_name)
 end)
-
--- Open current buffer in Marked 2 for previewing
-vim.keymap.set('n', '<leader>mp', '<cmd>!open -a \'Marked\' "%"<CR>')
 
 -- Closing buffers
 vim.keymap.set('n', '<leader>xx', '<cmd>%bd|e#|bd#<cr>') -- close all other buffers
