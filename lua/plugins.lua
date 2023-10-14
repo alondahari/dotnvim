@@ -125,9 +125,6 @@ Plug('kevinhwang91/nvim-bqf')
 
 Plug('vim-test/vim-test')
 
--- Display issues 
-Plug 'folke/trouble.nvim'
-
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 

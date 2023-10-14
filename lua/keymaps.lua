@@ -31,30 +31,6 @@ vim.keymap.set('n', '<leader>xt', '<cmd>bd<cr>') -- close this buffer
 vim.keymap.set('n', '<leader>xa', '<cmd>%bd<cr>') -- close all buffers
 vim.keymap.set('n', '<leader>xb', '<cmd>bp|bd#<cr>') -- close buffer but not split
 
--- Trouble
-vim.keymap.set("n", "<leader>it", "<cmd>TroubleToggle<cr>",
-  {silent = true, noremap = true}
-)
-
-vim.keymap.set("n", "<leader>iw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "<leader>id", "<cmd>TroubleToggle document_diagnostics<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "<leader>il", "<cmd>TroubleToggle loclist<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "<leader>iq", "<cmd>TroubleToggle quickfix<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
-  {silent = true, noremap = true}
-)
-vim.keymap.set("n", "<leader>in", function()
-  require("trouble").next({skip_groups = true, jump = true})
-end)
-
 -- Add new lines
 vim.keymap.set('n', '<Enter>', 'o<ESC>', {silent = true})
 vim.keymap.set('n', '<S-Enter>', 'O<ESC>', {silent = true})
