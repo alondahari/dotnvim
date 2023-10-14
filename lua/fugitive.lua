@@ -7,10 +7,10 @@ api.nvim_create_autocmd("User", {
   group = fugitiveGroup,
 })
 
-vim.keymap.set('n', '<leader>gs', ':vert top Git|vert res 80<cr>')
-vim.keymap.set('n', '<leader>gc', ':Git rebase --continue<cr>')
-vim.keymap.set('n', '<leader>ga', ':Git rebase --abort<cr>')
-vim.keymap.set('n', '<leader>gb', ':Git blame<cr>')
+vim.keymap.set('n', 'gs', ':vert top Git|vert res 80<cr>')
+vim.keymap.set('n', 'gc', ':Git rebase --continue<cr>')
+vim.keymap.set('n', 'ga', ':Git rebase --abort<cr>')
+vim.keymap.set('n', 'gb', ':Git blame<cr>')
 
 -- Gitsigns
 require('gitsigns').setup {
