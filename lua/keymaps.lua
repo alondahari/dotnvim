@@ -1,6 +1,3 @@
--- I like to use Ctrl-C for esc when in insert mode
-vim.keymap.set('i', '<c-c>', '<esc>')
-
 -- ----------------------------------------------
 -- Fuzzy Finder Configuration
 -- ----------------------------------------------
@@ -11,10 +8,6 @@ vim.keymap.set('n', 'ts', '<cmd>lua require(\'telescope.builtin\').live_grep()<c
 vim.keymap.set('n', 'th', '<cmd>lua require(\'telescope.builtin\').help_tags()<cr>')
 vim.keymap.set('n', 'tl', '<cmd>lua require(\'telescope.builtin\').git_commits()<cr>')
 vim.keymap.set('n', 'tr', '<cmd>lua require(\'telescope.builtin\').lsp_references({ fname_width = 100, jump_type = "tab" })<cr>')
-
--- ----------------------------------------------
--- Alt
--- ----------------------------------------------
 
 -- ----------------------------------------------
 -- Rename Current File
@@ -67,14 +60,18 @@ vim.keymap.set("n", "<leader><leader>", "<cmd>so<CR>")
 vim.keymap.set("n", "<leader>e", "<cmd>Ex<CR>")
 
 -- last buffer
-vim.keymap.set("n", "<c-l>", "<c-^>")
-vim.keymap.set("n", "l", "<cmd>vs #<CR>")
+vim.keymap.set("n", "l", "<c-^>")
+vim.keymap.set("n", "<c-l>", "<cmd>vs #<CR>")
 
 -- make current file executable
 vim.keymap.set("n", "<space>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- save and quit
-vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
+vim.keymap.set("n", "<leader>s", function()
+  -- in git messages we want to also close the file
+  local isInGit = string.find(vim.api.nvim_buf_get_name(0), '/.git/', 1, true)
+  if isInGit then vim.cmd("wq") else vim.cmd("w") end
+end)
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>")
 
 -- close tab
