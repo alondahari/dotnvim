@@ -1,7 +1,7 @@
 local op = require('op')
 
 op.setup({
-  signin_on_start = true
+  -- signin_on_start = true
 })
 
 vim.keymap.set("n", "<space>ld", function ()

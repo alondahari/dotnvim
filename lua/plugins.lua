@@ -131,7 +131,13 @@ Plug 'folke/trouble.nvim'
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 
+-- interact with github
+Plug('pwntester/octo.nvim')
 Plug('mrjones2014/op.nvim', { ['do'] = 'make install' })
+
+-- dressing up the ui
+Plug('stevearc/dressing.nvim')
+
 
 -- Initialize plugin system
 vim.call('plug#end')
