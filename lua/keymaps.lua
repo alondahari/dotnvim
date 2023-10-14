@@ -3,7 +3,7 @@
 -- ----------------------------------------------
 vim.keymap.set('n', 'tf', '<cmd>lua require(\'telescope.builtin\').find_files()<cr>')
 vim.keymap.set('n', 'tw', '<cmd>lua require(\'telescope.builtin\').find_files{hidden=true, no_ignore=true}<cr>')
-vim.keymap.set('n', 'tb', '<cmd>lua require(\'telescope.builtin\').buffers()<cr>')
+vim.keymap.set('n', 'to', '<cmd>lua require(\'telescope.builtin\').buffers()<cr>')
 vim.keymap.set('n', 'ts', '<cmd>lua require(\'telescope.builtin\').live_grep()<cr>')
 vim.keymap.set('n', 'th', '<cmd>lua require(\'telescope.builtin\').help_tags()<cr>')
 vim.keymap.set('n', 'tl', '<cmd>lua require(\'telescope.builtin\').git_commits()<cr>')
@@ -57,7 +57,7 @@ vim.keymap.set("n", "<leader>ra", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left>
 vim.keymap.set("n", "<leader><leader>", "<cmd>so<CR>")
 
 -- tree view
-vim.keymap.set("n", "<leader>e", "<cmd>Ex<CR>")
+vim.keymap.set("n", "h", "<cmd>Ex<CR>")
 
 -- last buffer
 vim.keymap.set("n", "l", "<c-^>")
