@@ -127,6 +127,7 @@ Plug('vim-test/vim-test')
 
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
+Plug 'pbogut/vim-dadbod-ssh'
 
 -- interact with github
 Plug('pwntester/octo.nvim')

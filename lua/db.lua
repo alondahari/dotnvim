@@ -1,8 +1,6 @@
 local op = require('op')
 
-op.setup({
-  -- signin_on_start = true
-})
+op.setup()
 
 vim.keymap.set("n", "<space>ld", function ()
   local dev_db = op.get_secret('FanInc dev database connection', 'url')
