@@ -60,7 +60,7 @@ vim.keymap.set("n", "<leader><leader>", "<cmd>so<CR>")
 vim.keymap.set("n", "h", "<cmd>Ex<CR>")
 
 -- last buffer
-vim.keymap.set("n", "l", "<c-^>")
+vim.keymap.set("n", "l", "<C-^>")
 vim.keymap.set("n", "<c-l>", "<cmd>vs #<CR>")
 
 -- make current file executable

@@ -21,3 +21,21 @@ vim.api.nvim_create_autocmd('BufWritePre', {
   pattern = '*',
   command = 'Neoformat'
 })
+vim.api.nvim_create_autocmd('filetype', {
+  pattern = 'netrw',
+  desc = 'Better mappings for netrw',
+  callback = function()
+    local bind = function(lhs, rhs)
+      vim.keymap.set('n', lhs, rhs, {remap = true, buffer = true})
+    end 
+
+    -- edit new file
+    bind('n', '%:w<CR>')
+
+    -- avoid clashing of our telescope commands with opening netrw in new tab
+    bind('t', '')
+
+    -- rename file
+    bind('r', 'R')
+  end
+})
