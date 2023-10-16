@@ -77,3 +77,8 @@ vim.keymap.set("n", "<leader>q", "<cmd>q<CR>")
 -- close tab
 vim.keymap.set('n', 'tc', ':tabc<cr>')
 vim.keymap.set('n', 'tn', ':tabn<cr>')
+
+-- use \ to comment stuff out
+vim.keymap.set({ "v", "x", "n", "o" }, "\\", "<Plug>Commentary", { noremap = true })
+vim.keymap.set("n", "\\\\", "<Plug>CommentaryLine", { noremap = true })
+vim.keymap.set("n", "\\u", "<Plug>Commentary<Plug>Commentary", { noremap = true })
