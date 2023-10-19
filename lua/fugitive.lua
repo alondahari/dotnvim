@@ -8,7 +8,7 @@ api.nvim_create_autocmd("User", {
 })
 
 vim.keymap.set('n', 'gs', ':vert top Git|vert res 80<cr>')
-vim.keymap.set('n', 'gc', ':Git rebase --continue<cr>')
+vim.keymap.set('n', '<leader>gr', ':Git rebase --continue<cr>')
 vim.keymap.set('n', 'ga', ':Git rebase --abort<cr>')
 vim.keymap.set('n', 'gb', ':Git blame<cr>')
 

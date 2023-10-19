@@ -1,14 +1,3 @@
--- ----------------------------------------------
--- Fuzzy Finder Configuration
--- ----------------------------------------------
-vim.keymap.set('n', 'tf', '<cmd>lua require(\'telescope.builtin\').find_files()<cr>')
-vim.keymap.set('n', 'tw', '<cmd>lua require(\'telescope.builtin\').find_files{hidden=true, no_ignore=true}<cr>')
-vim.keymap.set('n', 'to', '<cmd>lua require(\'telescope.builtin\').buffers()<cr>')
-vim.keymap.set('n', 'ts', '<cmd>lua require(\'telescope.builtin\').live_grep()<cr>')
-vim.keymap.set('n', 'th', '<cmd>lua require(\'telescope.builtin\').help_tags()<cr>')
-vim.keymap.set('n', 'tl', '<cmd>lua require(\'telescope.builtin\').git_commits()<cr>')
-vim.keymap.set('n', 'tr', '<cmd>lua require(\'telescope.builtin\').lsp_references({ fname_width = 100, jump_type = "tab", file_ignore_patterns = { ".*spec.*" } })<cr>')
-vim.keymap.set('n', 'tR', '<cmd>lua require(\'telescope.builtin\').lsp_references({ fname_width = 100, jump_type = "tab" })<cr>')
 
 -- ----------------------------------------------
 -- Rename Current File

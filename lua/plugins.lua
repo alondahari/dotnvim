@@ -17,6 +17,10 @@ vim.call('plug#begin', '~/.local/share/nvim/plugged')
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'brookhong/telescope-pathogen.nvim'
+Plug 'doctorfree/cheatsheet.nvim'
+Plug 'folke/which-key.nvim'
 
 -- Airline Status
 Plug 'vim-airline/vim-airline'
