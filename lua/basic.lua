@@ -139,9 +139,6 @@ g.vim_markdown_toml_frontmatter = 1 -- for TOML format
 g.vim_markdown_json_frontmatter = 1 -- for JSON format
 
 -- netrw
--- Keep the current directory and the browsing directory synced. This helps you avoid the move files error.
-g.netrw_keepdir = 0
-
 -- Change the copy command. Mostly to enable recursive copy of directories.
 g.netrw_localcopydircmd = 'cp -r'
 
