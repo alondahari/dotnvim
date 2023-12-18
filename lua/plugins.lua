@@ -29,6 +29,7 @@ Plug 'vim-airline/vim-airline-themes'
 -- Color Schemes
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'haishanh/night-owl.vim'
+Plug('catppuccin/nvim', { ['as'] = 'catppuccin' })
 
 -- Git Integration
 Plug 'lewis6991/gitsigns.nvim'
