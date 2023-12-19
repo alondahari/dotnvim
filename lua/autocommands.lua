@@ -40,14 +40,15 @@ vim.api.nvim_create_autocmd('filetype', {
   end
 })
 
--- change theme when nvim gains or loses focus
-vim.api.nvim_create_autocmd('FocusLost', {
-  callback = function ()
-    vim.cmd('colorscheme tokyonight-night')
-  end
-})
-vim.api.nvim_create_autocmd('FocusGained', {
-  callback = function ()
-    vim.cmd('colorscheme tokyonight-moon')
-  end
-})
+-- -- change theme when nvim gains or loses focus
+-- -- This is kinda nice but a bit too slow
+-- vim.api.nvim_create_autocmd('FocusLost', {
+--   callback = function ()
+--     vim.cmd('colorscheme tokyonight-night')
+--   end
+-- })
+-- vim.api.nvim_create_autocmd('FocusGained', {
+--   callback = function ()
+--     vim.cmd('colorscheme tokyonight-moon')
+--   end
+-- })
