@@ -1,8 +1,13 @@
 local nvim_lsp = require('lspconfig')
 
+local ltex_utils = require('ltex-utils')
+
+ltex_utils.setup({ dictionary = { path = vim.api.nvim_call_function("stdpath", {"config"}) .. "/spell/" } })
+
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
+  ltex_utils.on_attach(bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -90,6 +95,8 @@ local rust_opts = {
 
 require('rust-tools').setup(rust_opts)
 require'lspconfig'.jsonnet_ls.setup{}
+-- go lsp
+require'lspconfig'.gopls.setup{}
 require'lspconfig'.eslint.setup{}
 
 nvim_lsp.ccls.setup {
@@ -104,12 +111,16 @@ nvim_lsp.ccls.setup {
   }
 }
 
+-- ===========================================
+--  Add user dictionary for ltex-ls
+--  * en.utf-8.add must be created using `zg` when set spell is on
+-- ===========================================
 nvim_lsp.ltex.setup {
   on_attach = on_attach,
   settings = {
     ltex = {
-      language = "en-US",
-      dictionary = { ['en-US'] = { "NotaCode", "Pullwalla", "Gumleaf", "Manuform", "qmk", "dottmux", "dotnvim", "Uptech", "drewdeponte", "Alacritty", "neovim" } },
+      language = "en-GB",
+      dictionary = { ['en-GB'] = {}},
       additionalRules = {
         languageModel = '~/ngrams/',
       }

@@ -92,6 +92,8 @@ Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' }) -- We recommen
 Plug 'nvim-treesitter/playground'
 Plug 'nvim-treesitter/nvim-treesitter-context'
 
+Plug 'jhofscheier/ltex-utils.nvim'
+
 -- Completion
 Plug('hrsh7th/nvim-cmp', { branch = 'main' })
 Plug('hrsh7th/cmp-nvim-lua', { branch = 'main' })
