@@ -1,7 +1,7 @@
 -- ----------------------------------------------
 -- Alternate File Switching
 -- ----------------------------------------------
-function alt(path)
+local function alt(path)
   local function isempty(s)
     return s == nil or s == ''
   end
@@ -19,7 +19,7 @@ function alt(path)
   end
 end
 
-function alt_command(path, alt_handler)
+local function alt_command(path, alt_handler)
   local alternate_file_paths = alt(path)
   if alternate_file_paths == nil then
     print("No alternate files found for " .. path .. "!")
@@ -47,7 +47,7 @@ local alternates_picker = function(alternates, opts)
   }):find()
 end
 
-function alt_telescope_handler(current_file_path, alternate_file_paths)
+local function alt_telescope_handler(_current_file_path, alternate_file_paths)
   -- vim.cmd('w')
   -- vim.cmd('e ' .. alternate_file_path)
   alternates_picker(alternate_file_paths)
