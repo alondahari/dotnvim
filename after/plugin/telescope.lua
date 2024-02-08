@@ -1,6 +1,8 @@
 require('telescope').load_extension('fzy_native')
 require("telescope").load_extension('pathogen')
 
+
+
 -- https://github.com/nvim-telescope/telescope.nvim/wiki/Configuration-Recipes#mapping-esc-to-quit-in-insert-mode
 
 local actions = require("telescope.actions")
@@ -16,7 +18,7 @@ require("telescope").setup{
   }
 }
 
-vim.keymap.set('n', 'tf', "<cmd>lua require(\'telescope.builtin\').find_files()<cr>", { silent = true })
+vim.keymap.set('n', 'tf', "<cmd>lua require(\'telescope-project-files\').project_files()<cr>", { silent = true })
 vim.keymap.set('n', 'tw', '<cmd>lua require(\'telescope.builtin\').find_files({ hidden = true })<cr>')
 vim.keymap.set('n', 'to', '<cmd>lua require(\'telescope.builtin\').buffers()<cr>')
 vim.keymap.set('n', 'ts', '<cmd>lua require(\'telescope.builtin\').live_grep()<cr>', { silent = true })
@@ -25,3 +27,5 @@ vim.keymap.set('n', 'tl', '<cmd>lua require(\'telescope.builtin\').git_commits()
 vim.keymap.set('n', 'tr', '<cmd>lua require(\'telescope.builtin\').lsp_references({ fname_width = 100, jump_type = "tab", file_ignore_patterns = { ".*spec.*" } })<cr>')
 vim.keymap.set('n', 'tR', '<cmd>lua require(\'telescope.builtin\').lsp_references({ fname_width = 100, jump_type = "tab" })<cr>')
 vim.keymap.set('n', 'ty', '<cmd>Cheatsheet<cr>')
+
+

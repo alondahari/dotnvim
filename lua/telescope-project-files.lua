@@ -1,4 +1,5 @@
 -- https://github.com/nvim-telescope/telescope.nvim/wiki/Configuration-Recipes#falling-back-to-find_files-if-git_files-cant-find-a-git-directory
+
 local M = {}
 
 -- We cache the results of "git rev-parse"
