@@ -1,13 +1,8 @@
 local nvim_lsp = require('lspconfig')
 
-local ltex_utils = require('ltex-utils')
-
-ltex_utils.setup({ dictionary = { path = vim.api.nvim_call_function("stdpath", {"config"}) .. "/spell/" } })
-
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
-  ltex_utils.on_attach(bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -53,7 +48,7 @@ end
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local servers = { 'tsserver', 'clojure_lsp', 'sourcekit', 'pyright', 'vimls', 'dockerls', 'terraformls', 'graphql',
-  'dartls', 'lua_ls', 'prismals', 'ltex' }
+  'dartls', 'lua_ls', 'prismals', 'ltex', 'ruby-ls' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
@@ -98,6 +93,7 @@ require'lspconfig'.jsonnet_ls.setup{}
 -- go lsp
 require'lspconfig'.gopls.setup{}
 require'lspconfig'.eslint.setup{}
+require'lspconfig'.ruby_ls.setup{}
 
 nvim_lsp.ccls.setup {
   init_options = {

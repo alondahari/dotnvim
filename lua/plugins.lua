@@ -35,10 +35,12 @@ Plug('catppuccin/nvim', { ['as'] = 'catppuccin' })
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'tpope/vim-fugitive'
 
--- Utilities
+-- Tim Pope Corner :notworthy:
 Plug 'tpope/vim-commentary' -- make commenting code easier
 Plug 'tpope/vim-surround' -- make dealing with surroundings easier
 Plug 'tpope/vim-abolish' -- replace word variants
+Plug 'tpope/vim-repeat' -- repeat plugin commands
+Plug 'tpope/vim-speeddating' -- increment dates
 
 -- Global Search
 Plug 'jremmen/vim-ripgrep'
@@ -91,8 +93,6 @@ Plug 'neovim/nvim-lspconfig'
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' }) -- We recommend updating the parsers on update
 Plug 'nvim-treesitter/playground'
 Plug 'nvim-treesitter/nvim-treesitter-context'
-
-Plug 'jhofscheier/ltex-utils.nvim'
 
 -- Completion
 Plug('hrsh7th/nvim-cmp', { branch = 'main' })
