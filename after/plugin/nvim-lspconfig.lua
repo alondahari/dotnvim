@@ -94,6 +94,15 @@ require'lspconfig'.jsonnet_ls.setup{}
 require'lspconfig'.gopls.setup{}
 require'lspconfig'.eslint.setup{}
 require'lspconfig'.ruby_ls.setup{}
+require'lspconfig'.lua_ls.setup{
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { 'vim' }
+      }
+    }
+  }
+}
 
 nvim_lsp.ccls.setup {
   init_options = {
