@@ -21,3 +21,4 @@ require('octo').setup({
 
 vim.keymap.set('n', '<leader>gp', '<cmd>Octo pr search<cr>') -- close all other buffers
 vim.keymap.set('n', '<leader>gb', '<cmd>Octo repo browser<cr>') -- close all other buffers
+
