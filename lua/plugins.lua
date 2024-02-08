@@ -137,7 +137,6 @@ Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'pbogut/vim-dadbod-ssh'
 
 -- interact with github
-Plug('pwntester/octo.nvim')
 Plug('mrjones2014/op.nvim', { ['do'] = 'make install' })
 
 -- dressing up the ui
