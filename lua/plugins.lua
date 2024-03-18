@@ -118,8 +118,7 @@ Plug 'sbdchd/neoformat'
 
 Plug 'farmergreg/vim-lastplace'
 
-Plug 'github/copilot.vim'
-
+Plug 'zbirenbaum/copilot.lua'
 
 Plug('joshdick/onedark.vim', { branch = 'main' })
 Plug('sainnhe/sonokai', { branch = 'master' })
