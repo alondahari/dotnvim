@@ -22,9 +22,9 @@ Plug 'brookhong/telescope-pathogen.nvim'
 Plug 'doctorfree/cheatsheet.nvim'
 Plug 'folke/which-key.nvim'
 
--- Airline Status
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+-- Lualine Status
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'AndreM222/copilot-lualine'
 
 -- Color Schemes
 Plug 'drewtempelmeyer/palenight.vim'

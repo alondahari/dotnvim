@@ -13,7 +13,6 @@ opt.equalalways = false
 opt.termguicolors = true
 opt.background = 'dark'
 g.sonokai_style = 'andromeda'
-g.airline_theme = 'sonokai'
 cmd('colorscheme tokyonight-moon')
 -- make line numbers more visible
 cmd('highlight LineNr guifg=Grey') 
