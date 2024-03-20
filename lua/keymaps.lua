@@ -1,13 +1,3 @@
-
--- ----------------------------------------------
--- Rename Current File
--- ----------------------------------------------
-vim.keymap.set('n', '<leader>n', function()
-  local old_name = vim.fn.expand('%')
-  local new_name = vim.fn.input('New file name: ', vim.fn.expand('%'), 'file')
-  rename(old_name, new_name)
-end)
-
 -- Closing buffers
 vim.keymap.set('n', '<leader>xx', '<cmd>%bd|e#|bd#<cr>') -- close all other buffers
 vim.keymap.set('n', '<leader>xt', '<cmd>bd<cr>') -- close this buffer

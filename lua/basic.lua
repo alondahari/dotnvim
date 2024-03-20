@@ -1,6 +1,6 @@
 ---------- HELPERS ----------
 local opt = vim.opt -- to set options
-local g = vim.g -- a table to access global variables
+local g = vim.g     -- a table to access global variables
 local cmd = vim.cmd
 
 -- Leave eol of source files alone
@@ -12,11 +12,9 @@ opt.equalalways = false
 -- --------------------------------------------
 opt.termguicolors = true
 opt.background = 'dark'
-g.sonokai_style = 'andromeda'
 cmd('colorscheme tokyonight-moon')
 -- make line numbers more visible
-cmd('highlight LineNr guifg=Grey') 
-
+cmd('highlight LineNr guifg=Grey')
 
 -- ----------------------------------------------
 -- Line Numbering
@@ -133,7 +131,7 @@ g.vim_markdown_folding_disabled = 1
 g.vim_markdown_conceal = 0
 
 -- support front matter of various formats
-g.vim_markdown_frontmatter = 1 -- for YAML format
+g.vim_markdown_frontmatter = 1      -- for YAML format
 g.vim_markdown_toml_frontmatter = 1 -- for TOML format
 g.vim_markdown_json_frontmatter = 1 -- for JSON format
 

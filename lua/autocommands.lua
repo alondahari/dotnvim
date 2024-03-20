@@ -26,8 +26,8 @@ vim.api.nvim_create_autocmd('filetype', {
   desc = 'Better mappings for netrw',
   callback = function()
     local bind = function(lhs, rhs)
-      vim.keymap.set('n', lhs, rhs, {remap = true, buffer = true})
-    end 
+      vim.keymap.set('n', lhs, rhs, { remap = true, buffer = true })
+    end
 
     -- edit new file
     bind('n', '%:w<CR>')
