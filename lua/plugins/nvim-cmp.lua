@@ -36,8 +36,6 @@ return {
     local cmp = require('cmp')
     local lspkind = require('lspkind')
 
-    require('copilot_cmp').setup()
-
     cmp.setup({
       mapping = {
         ['<Up>'] = cmp.mapping.select_prev_item(),
