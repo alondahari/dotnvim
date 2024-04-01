@@ -1,21 +1,12 @@
 # My NeoVim Configuration
 
-My personal NeoVim configuration and plugins I use
+My personal NeoVim configuration and plugins I use.
 
 ## Installation
 
 ```
 mkdir -p ~/.config/
-git clone https://github.com/drewdeponte/dotnvim.git ~/.config/nvim
-```
-
-## Install Plugins
-
-Launch `nvim` and run the following:
-
-```
-:PlugInstall
-:UpdateRemotePlugins
+git clone https://github.com/alondahari/dotnvim.git ~/.config/nvim
 ```
 
 ## Check Health
